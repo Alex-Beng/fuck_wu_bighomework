@@ -1,0 +1,9 @@
+platform-tools
+Camera
+
+*.exe
+*.o
+*.sh
+
+*.jpg
+*.png
