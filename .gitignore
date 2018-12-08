@@ -1,5 +1,7 @@
 platform-tools
 Camera
+__pycache__
+images
 
 *.exe
 *.o

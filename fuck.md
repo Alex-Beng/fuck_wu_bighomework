@@ -10,12 +10,13 @@
 
 # 实现
 ### sdk.py 和 main.py 实现与流程分离
-### in adk.py
+### in adk.py (做作业先不封装成类了...)
 1. TakePhoto 用于执行拍照，
-2. GetPath 通过 ls + read 获得图片的名称，然后字符串处理获得路径
-3. GetImage 用于接受路径读取手机的图片， pull 到本地，然后删除，并做异常处理 
-4. ProcImage 用于 pull 下来的本地图片，并返回
-5. CheckSatus 检查 adb 连接状态，并尝试重连
+2. GetImgName 通过 ls + read 获得图片的名称，然后返回
+3. GetImage 用于接受文件名读取手机的图片， pull 到本地，然后删除，并做异常处理 
+4. ProcImage 用于 pull 下来的本地图片，并返回 
+5. CheckStatus 检查 adb 连接状态，并尝试重连
+6. SetIP 用于设置 device ip
 
 ### in main.py
 工作流程，策略代码
