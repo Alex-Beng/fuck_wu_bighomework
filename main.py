@@ -8,12 +8,12 @@ import math
 
 if __name__ == "__main__":
 
-    # print("Need pre-take to get parameter...")
-    # os.system("adb shell input tap 100 1800")
-    # TakePhoto()
-    # image = GetImage(GetImgName())
-    # print("Pre-take done.")
-    # print()
+    print("Need pre-take to get parameter...")
+    os.system("adb shell input tap 100 1800")
+    TakePhoto()
+    image = GetImage(GetImgName())
+    print("Pre-take done.")
+    print()
 
     video_path = input("Where do you want to save the generated video?(end with '/') : ")
     save_img_flag = int(input("Do you want to save all images?(0/1) : "))
