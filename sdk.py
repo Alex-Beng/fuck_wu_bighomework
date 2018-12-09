@@ -31,8 +31,8 @@ def TakePhoto():
     
     return True
 
-def GetImgName():
-    root_path = "storage/emulated/0/DCIM/Camera/"
+def GetImage(root_path, delete_flag = True, save_flag = True, save_path = './images/'):
+    # root_path = "storage/0E6F-D222/DCIM/Camera/"
 
     date = datetime.datetime.now().strftime("%Y%m%d")
 
@@ -40,20 +40,20 @@ def GetImgName():
     result_list = [i for i in result.split() if i != '' and date in i]
     
     if len(result_list) == 0:
-        return result.split()[-1]
-    return result_list[-1]
+        file_name = result.split()[0]
+    else: 
+        file_name = result_list[-1]
 
-def GetImage(name):
-    root_path = "storage/emulated/0/DCIM/Camera/"
-    path = root_path + name
-    os.system("adb pull " + path + " ./images")
-    os.system("adb shell rm " + path)
-    image = cv2.imread("./images/"+name)
-    os.system("rm ./images/"+name)
+    path = root_path + file_name
+    os.system("adb pull " + path + ' ' + save_path)
+    if delete_flag:
+        os.system("adb shell rm " + path)
+
+    image = cv2.imread(save_path + file_name)
+    if not save_flag:
+        os.system("rm " + save_path + " " + file_name)
     return image
 
-# def ProcImage(image):
-#     return 
 
 def CheckStatus():
     global DEVICES_IP

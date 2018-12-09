@@ -20,3 +20,10 @@
 
 ### in main.py
 工作流程，策略代码
+
+----
+
+## Update on 2018.12.09
+1. 增加 main.py 工作流程的鲁棒性
+2. 将 GetImgName 与 GetImage 合并，简化流程
+3. 将保存图片到本地集成到 GetImage 中，减少 IO
