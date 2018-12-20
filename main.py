@@ -15,12 +15,12 @@ if __name__ == "__main__":
     print()
 
     video_path = input("Where do you want to save the generated video?(end with '/') : ")
-    save_img_flag = int(input("Do you want to save all images in your phone?(0/1) : "))
+    save_img_flag = int(input("Do you want to save all images in your computer?(0/1) : "))
     if save_img_flag:
         save_img_path = input("Where do you want to save the image?(end with '/') : ")
     else:
         save_img_path = ''
-    rm_img_flag = int(input("Do you want to remote the image in your devices? (0/1) : "))
+    rm_img_flag = int(input("Do you want to rm the image in your phone? (0/1) : "))
     show_img_flag = int(input("Do you want to show the images while capturing?(0/1) :"))
 
     real_time  = float(input("How long are the real time you want?(in seconds) : "))    
