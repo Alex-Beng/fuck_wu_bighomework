@@ -39,8 +39,8 @@ def MoveImage2Else(paths_list, else_path):
             
 
 if __name__ == "__main__":
-    path_lists = ["./222.txt"]
-    MoveImage2Else(path_lists, "./233/")
+    # path_lists = ["./222.txt"]
+    # MoveImage2Else(path_lists, "./233/")
 
     img_paths =  GetImagePaths("./images/*", "20181219")
     # for i in img_paths:

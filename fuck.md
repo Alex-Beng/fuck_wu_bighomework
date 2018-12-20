@@ -27,3 +27,9 @@
 1. 增加 main.py 工作流程的鲁棒性
 2. 将 GetImgName 与 GetImage 合并，简化流程
 3. 将保存图片到本地集成到 GetImage 中，减少 IO
+
+----
+
+## Update on 2018.13.20
+1. 增加手动模式不并入 sdk.py, 独立成 image2video.py
+2. image2video.py 中实现移动多个文件 & 通过日期获得相关图片
